@@ -1,0 +1,7 @@
+{
+  "options": {
+    "field": "build",
+    "dontChangeIndentation": true
+  },
+  "files": ["package.json"]
+}

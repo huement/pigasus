@@ -1,0 +1,9 @@
+{
+  "dev": {
+    "path": "//<%= grunt.config.get(\"dev.url\") %>index.html",
+    "app": "Google Chrome"
+  },
+  "file": {
+    "path": "./"
+  }
+}

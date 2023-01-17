@@ -1,0 +1,25 @@
+{
+  "superclass": "plume",
+  "cache": ".cache",
+  "globalTasks": "tasks/run/cmds.json",
+  "binDir": "tasks/run",
+  "helpItems": "tasks/lib/help.json",
+  "staticMaps": "tasks/lib/maps.json",
+  "taskDir": "tasks",
+  "shareDir": "var",
+  "dev": {
+    "website": "example",
+    "sass": "example/scss",
+    "pages": "example/pug",
+    "colors": "example/scss/_colors.scss",
+    "chords": "example/scss/_chords.scss",
+    "palette": "tokens/colors.json",
+    "tokens": "tokens/chords.json",
+    "url": "lucky.local/dev/grunt-23/dist/"
+  },
+  "prod": {
+    "css": "dist/css",
+    "js": "dist/js",
+    "pages": "dist"
+  }
+}

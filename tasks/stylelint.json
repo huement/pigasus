@@ -1,0 +1,13 @@
+{
+  "options": {
+    "configFile": ".stylelintrc",
+    "formatter": "string",
+    "ignoreDisables": true,
+    "failOnError": true,
+    "outputFile": "<%= grunt.config.get(\"dev.debug\") %>/stylelintreport.txt",
+    "reportNeedlessDisables": true,
+    "fix": true,
+    "syntax": ""
+  },
+  "src": ["<%= grunt.config.get(\"prod.style\") %>/*.css"]
+}

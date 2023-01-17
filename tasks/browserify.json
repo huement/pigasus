@@ -1,0 +1,26 @@
+{
+  "basic": {
+    "files": [
+      {
+        "expand": true,
+        "cwd": "<%= grunt.config.get(\"dev.website\") %>/lit/",
+        "src": ["*.mjs"],
+        "dest": "<%= grunt.config.get(\"prod.pages\") %>/js/",
+        "ext": ".js"
+      }
+    ],
+    "options": {
+      "browserifyOptions": { "debug": true },
+      "transform": [
+        [
+          "babelify",
+          {
+            "presets": [["@babel/preset-env"]],
+            "global": true,
+            "sourceMaps": true
+          }
+        ]
+      ]
+    }
+  }
+}

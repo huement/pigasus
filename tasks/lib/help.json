@@ -1,0 +1,30 @@
+{
+  "debug": {
+    "category": "help",
+    "name": "Debug Mode",
+    "desc": "Enable debugging mode for tasks that support it.",
+    "link": "https://gruntjs.com/using-the-cli",
+    "task": "--debug"
+  },
+  "stack": {
+    "category": "help",
+    "name": "Stack Trace & Die",
+    "desc": "Print a stack trace when exiting with a warning or fatal error.",
+    "link": "https://gruntjs.com/using-the-cli",
+    "task": "--stack"
+  },
+  "verbose": {
+    "category": "help",
+    "name": "Verbose Output",
+    "desc": "Runs normally, but outputs A LOT more information.",
+    "link": "https://gruntjs.com/using-the-cli",
+    "task": "--verbose"
+  },
+  "config-debug": {
+    "category": "help",
+    "name": "Config-Debug",
+    "desc": "Print the entire Dynamic configuration object and exits.",
+    "link": "https://github.com/firstandthird/load-grunt-config",
+    "task": "--config-debug"
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "dev",
+    "desc": "live development mode",
+    "task": "cat,browserSync,watch:all"
+  },
+  {
+    "name": "publish",
+    "desc": "Creates a finalized public build",
+    "task": "cat,clean,changelogcustomizable,dart-sass,pug,browserify,typeset,stylelint,cssmin,htmlmin,bumpup"
+  },
+  {
+    "name": "build",
+    "desc": "Creates a quick pug+css+js development build",
+    "task": "cat,concurrent:web,dart-sass:mojo,stylelint,prettify,buildnumber"
+  },
+  {
+    "name": "pages",
+    "desc": "Dev build focusing on pug only",
+    "task": "cat,page-data,pug,copy:docs,browserify:docs,buildnumber"
+  }
+]

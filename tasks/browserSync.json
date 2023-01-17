@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "bsFiles": {
+      "src": [
+        "<%= grunt.config.get(\"prod.js\") %>/*.js",
+        "<%= grunt.config.get(\"prod.css\") %>/*.css",
+        "<%= grunt.config.get(\"prod.pages\") %>/*.html"
+      ]
+    },
+    "options": {
+      "watchTask": true,
+      "ui": false,
+      "proxy": "<%= grunt.config.get(\"dev.url\") %>",
+      "startPath": "/<%= grunt.config.get(\"prod.pages\") %>/index.pretty.html",
+      "scrollRestoreTechnique": "cookie",
+      "reloadDebounce": 200,
+      "reloadThrottle": 100
+    }
+  }
+}

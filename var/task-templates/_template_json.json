@@ -1,0 +1,8 @@
+{
+  "options": {
+    "test": true
+  },
+  "target": {
+    "files": []
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "pages": [
+    "<%= grunt.config.get(\"cache\") %>",
+    "<%= grunt.config.get(\"prod.pages\") %>"
+  ],
+  "style": ["<%= grunt.config.get(\"prod.style\") %>"],
+  "workspace": [".eyeglass_cache", ".history"]
+}

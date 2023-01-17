@@ -1,0 +1,7 @@
+{
+  "mojo": {
+    "src": "<%= grunt.config.get(\"dev.media\") %>/tokens.json",
+    "dest": "<%= grunt.config.get(\"dev.style\") %>/variables.scss",
+    "options": {}
+  }
+}

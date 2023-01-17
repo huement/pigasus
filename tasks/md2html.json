@@ -1,0 +1,23 @@
+{
+  "mojomd": {
+    "options": {
+      "layout": "dist/www/template.pretty.html",
+      "basePath": "http://lucky.local/dev/mojo_v3/",
+      "highlightjs": {
+        "enabled": true,
+        "style": "monokai",
+        "compressStyle": false,
+        "options": {}
+      }
+    },
+    "files": [
+      {
+        "expand": true,
+        "cwd": "<%= grunt.config.get(\"dev.website\") %>/type",
+        "src": ["**/*.md"],
+        "dest": "<%= grunt.config.get(\"prod.pages\") %>",
+        "ext": ".html"
+      }
+    ]
+  }
+}

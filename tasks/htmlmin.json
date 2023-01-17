@@ -1,0 +1,11 @@
+{
+  "dist": {
+    "options": {
+      "removeComments": true,
+      "collapseWhitespace": true
+    },
+    "files": {
+      "<%= grunt.config.get(\"prod.pages\") %>/index.html": "<%= grunt.config.get(\"prod.pages\") %>/index.html"
+    }
+  }
+}

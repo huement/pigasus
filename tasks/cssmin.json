@@ -1,0 +1,20 @@
+{
+  "options": {
+    "mergeIntoShorthands": true,
+    "roundingPrecision": 5,
+    "report": "gzip",
+    "sourceMap": true,
+    "level": 2
+  },
+  "target": {
+    "files": [
+      {
+        "expand": true,
+        "cwd": "<%= grunt.config.get(\"prod.style\") %>",
+        "src": ["*.css", "!*.min.css", "!*.css.map"],
+        "dest": "<%= grunt.config.get(\"prod.style\") %>",
+        "ext": ".min.css"
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "fullBanner": {
+    "options": {
+      "position": "top",
+      "banner": "/*!\n* <%= package.title || package.name %> - v<%= package.version %> - <%= grunt.template.today('dddd, mmmm dS, yyyy, h:MM:ss TT') %>\n<%= package.homepage ? '* ' + package.homepage + '\\n' : '' %>* Copyright <%= package.author.org %>; Licensed <%= package.license %> */\n",
+      "linebreak": true
+    },
+    "files": {
+      "src": [
+        "<%= grunt.config.get(\"prod.style\") %>/<%= grunt.config.get(\"name\") %>.css"
+      ]
+    }
+  },
+  "miniBanner": {
+    "options": {
+      "position": "top",
+      "banner": "/**! <%= package.name %> - v<%= package.version %> - Copyright (c) <%= package.author.org %> <%= grunt.template.today(\"now\") %> */ \n",
+
+      "linebreak": true
+    },
+    "files": {
+      "src": [
+        "<%= grunt.config.get(\"prod.debug\") %>/jollybar.css",
+        "<%= grunt.config.get(\"prod.debug\") %>/jollybar.js"
+      ]
+    }
+  }
+}
