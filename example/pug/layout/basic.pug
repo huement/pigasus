@@ -1,0 +1,44 @@
+include ../_config
+block config
+
+include ../mixins/webUI
+include ../mixins/form
+include ../mixins/navbar
+
+doctype html
+html(lang= lang)
+    head
+        include ../partials/meta
+        meta(charset="UTF-8")
+        title= title
+        meta(name="description", content= metaDesc )
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
+        link(rel="icon" type="image/png", href= "favicon-32x32.png" sizes="32x32")
+        link(rel="icon" type="image/png", href= "favicon-16x16.png" sizes="16x16")
+        link(href="favicon.ico" rel="shortcut icon" type="image/x-icon")
+
+        link(rel="preconnect", href="https://fonts.googleapis.com")
+        link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&family=Saira:wght@500;600&family=Space+Mono&display=swap", rel="stylesheet")
+        link(rel="stylesheet", href= path + "css/mojo.css?stamp=" + stamp, type="text/css" id="mojo_css")
+        link(rel="stylesheet", href= path + "css/iconos.css?token=" + stamp, type="text/css" id="mojo_icons")
+
+        block pageCSS
+
+    body(class='no-javascript')
+        script document.body.classList.remove('no-javascript');
+
+        div(class= superClass)
+            #content(class="container json-builder-main")
+                - var b_items = {"style": "bg-dark", "href": "#", "name": "GRUNT23"}
+                - var m_items = [{"url":"index","name":"Index"},{"url":"riot","name":"Riot"},{"url":"example","name":"Example"}]
+
+                +navbarBS5(b_items, m_items, true)
+
+                block content
+
+                include ../partials/footer
+
+        <!-- #{envData.url} -->
+
+        block scriptsJS

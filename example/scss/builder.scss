@@ -1,0 +1,83 @@
+///
+/// DOCS PAGE STYLINGS
+/// Used to style the docs + styleguide areas
+///
+
+// Sass Modules
+@use "sass:map";
+@use "sass:list";
+@use "sass:math";
+@use "sass:color";
+@use "sass:meta";
+
+@import "../../tokens/_palette.scss";
+
+// Global Constants
+body {
+  background: #3f3f3f;
+  color: #f0f0f0;
+}
+
+.s-title {
+  color: #fe445f;
+}
+
+.anchor {
+  color: #41ead4;
+  display: none;
+  margin-left: 0.2rem;
+  padding: 0 0.2rem;
+  &:focus,
+  &:hover {
+    display: inline;
+    text-decoration: none;
+  }
+}
+
+.displayBox,
+.buildBox {
+  height: 100%;
+  display: block;
+  position: relative;
+}
+
+.displayBox {
+  padding: 0.2rem;
+  background: map.get($darks, 600);
+  color: $light_lighter;
+}
+
+.buildBox {
+  padding: 2rem;
+  background: $light_dark;
+  color: $dark_darker;
+
+  .form-group {
+    .form-label {
+      margin: 0 0 0.4rem 0;
+    }
+
+    .form-input {
+      margin-bottom: 1rem;
+      line-height: 1.25;
+      font-size: 1.2rem;
+      padding: 0.4rem 0.8rem;
+    }
+  }
+}
+
+p {
+  color: #cccccc;
+}
+p.name {
+  color: #41ead4;
+}
+p.version {
+  color: #fbfe12;
+}
+
+///
+/// SOURCE CODE HIGHLIGHT THEME
+///
+
+@import "source_code";

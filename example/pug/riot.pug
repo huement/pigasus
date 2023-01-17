@@ -1,0 +1,21 @@
+extends ./layout/basic
+
+append config
+  - var metaDesc = 'A simple example app for customizing then downloading a JSON object comprised of design token data'
+  - var slug = 'riot'
+  - var title = 'Riot Example'
+  - var colorTokens = require('../tokens/chords.json')
+
+append scriptsJS
+  script(src=path+"js/riot.js?stamp=" + stamp)
+
+append pageCSS
+  link(rel="stylesheet", href=path+"css/builder.css?stamp="+ stamp, type="text/css" id="riot_css")
+
+block content
+  +page-heading('riot', 'RIOT.js')
+
+  .row.gx-5
+    .col-12
+      div.tbox
+        #root

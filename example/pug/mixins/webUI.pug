@@ -1,0 +1,29 @@
+mixin page-heading(id, name)
+    .head-block(id=id)
+        h1.s-title
+            | #{name}
+            a.anchor(href='#'+id aria-hidden='true') #
+        //- if block
+        //-     block
+
+
+mixin page-subheading(id, name)
+    h2.s-subtitle(id=id)
+        | #{name}
+        a.anchor(href='#'+id aria-hidden='true') #
+
+mixin page-linebreak(color="dark")
+    .vr-block.vr-block-two
+    div.px-5
+        div(class="vr-block rounded-2 bg-"+color)
+    .vr-block.vr-block-four
+
+mixin page-alert(color="info")
+    .vr-block.vr-block-two
+    p(class="half-lead rounded-2 p-5 bg-"+color)
+        if block
+            block
+    .vr-block.vr-block-two
+
+mixin page-navbar(color="light", type="split")
+    if type

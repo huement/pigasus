@@ -1,0 +1,543 @@
+/* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+js-extras+json+json5+jsonp+markdown+markup-templating+php+jsx+tsx+sass+scss+typescript+typoscript&plugins=line-highlight+line-numbers+show-language+jsonp-highlight+highlight-keywords+command-line+normalize-whitespace+toolbar+copy-to-clipboard */
+
+@use "sass:map";
+@use "sass:list";
+@use "sass:math";
+@use "sass:color";
+@use "sass:meta";
+
+// Custom Mojo-Nights Theme
+@import "../../tokens/_palette.scss";
+
+$color_1: map.get($lights, 400);
+$color_2: map.get($mediums, 900);
+$color_3: map.get($reds, 800);
+$color_4: map.get($blues, 800);
+$color_5: map.get($oranges, 800);
+$color_6: map.get($yellows, 800);
+$color_7: map.get($ultras, 800);
+$color_8: map.get($cyans, 800);
+$color_9: map.get($blues, 500);
+$color_10: map.get($greens, 700);
+$color_11: map.get($secondarys, 800);
+$color_12: inherit;
+$color_13: map.get($lights, 200);
+
+$background: map.get($mediums, 300);
+$highlight_bg: hsla(24, 20%, 50%, 0.4);
+$line_bg: rgba(128, 128, 128, 0.2);
+
+$font-family_1: "Space Mono", Consolas, Monaco, "Fira Mono", "Fira Code", "Andale Mono", "Ubuntu Mono", monospace;
+
+code[class*="language-"] {
+  font-family: $font-family_1;
+  font-size: 1em;
+  line-height: 1.5;
+
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-wrap: normal;
+  word-break: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+
+  color: $color_1;
+  background: 0 0;
+
+  -ms-hyphens: none;
+}
+
+pre[class*="language-"] {
+  font-family: $font-family_1;
+  font-size: 1em;
+  line-height: 1.5;
+
+  overflow: auto;
+
+  margin: 0.5em 0;
+  padding: 1em;
+
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-wrap: normal;
+  word-break: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+
+  color: $color_1;
+  background: 0 0;
+  background: $background;
+
+  -ms-hyphens: none;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: $background;
+}
+
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em;
+
+  white-space: normal;
+
+  border-radius: 0.3em;
+}
+
+.token.block-comment {
+  color: $color_2;
+}
+
+.token.cdata {
+  color: $color_2;
+}
+
+.token.comment {
+  color: $color_2;
+}
+
+.token.doctype {
+  color: $color_2;
+}
+
+.token.prolog {
+  color: $color_2;
+}
+
+.token.punctuation {
+  color: $color_1;
+}
+
+.token.attr-name {
+  color: $color_3;
+}
+
+.token.deleted {
+  color: $color_3;
+}
+
+.token.namespace {
+  color: $color_3;
+}
+
+.token.tag {
+  color: $color_3;
+}
+
+.token.function-name {
+  color: $color_4;
+}
+
+.token.boolean {
+  color: $color_5;
+}
+
+.token.function {
+  color: $color_5;
+}
+
+.token.number {
+  color: $color_5;
+}
+
+.token.class-name {
+  color: $color_6;
+}
+
+.token.constant {
+  color: $color_6;
+}
+
+.token.property {
+  color: $color_6;
+}
+
+.token.symbol {
+  color: $color_6;
+}
+
+.token.atrule {
+  color: $color_7;
+}
+
+.token.builtin {
+  color: $color_7;
+}
+
+.token.important {
+  font-weight: 700;
+
+  color: $color_7;
+}
+
+.token.keyword {
+  color: $color_7;
+}
+
+.token.selector {
+  color: $color_7;
+}
+
+.token.attr-value {
+  color: $color_8;
+}
+
+.token.char {
+  color: $color_8;
+}
+
+.token.regex {
+  color: $color_8;
+}
+
+.token.string {
+  color: $color_8;
+}
+
+.token.variable {
+  color: $color_8;
+}
+
+.token.entity {
+  cursor: help;
+
+  color: $color_9;
+}
+
+.token.operator {
+  color: $color_9;
+}
+
+.token.url {
+  color: $color_9;
+}
+
+.token.bold {
+  font-weight: 700;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.inserted {
+  color: $color_10;
+}
+pre[data-line] {
+  position: relative;
+
+  padding: 1em 0 1em 3em;
+}
+
+.line-highlight {
+  line-height: inherit;
+
+  position: absolute;
+  right: 0;
+  left: 0;
+
+  margin-top: 1em;
+  padding: inherit 0;
+
+  white-space: pre;
+  pointer-events: none;
+
+  background: hsla(24, 20%, 50%, 0.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%, 0.1) 70%, hsla(24, 20%, 50%, 0));
+  &:before {
+    font: bold 65%/1.5 sans-serif;
+
+    position: absolute;
+    top: 0.4em;
+    left: 0.6em;
+
+    min-width: 1em;
+    padding: 0 0.5em;
+
+    content: attr(data-start);
+    text-align: center;
+    vertical-align: 0.3em;
+
+    color: $color_11;
+    border-radius: 999px;
+    background-color: $highlight_bg;
+    box-shadow: 0 1px #ffffff;
+    text-shadow: none;
+  }
+}
+
+.line-highlight[data-end] {
+  &:after {
+    font: bold 65%/1.5 sans-serif;
+
+    position: absolute;
+    top: 0.4em;
+    top: auto;
+    bottom: 0.4em;
+    left: 0.6em;
+
+    min-width: 1em;
+    padding: 0 0.5em;
+
+    content: attr(data-start);
+    content: attr(data-end);
+    text-align: center;
+    vertical-align: 0.3em;
+
+    color: $color_11;
+    border-radius: 999px;
+    background-color: $highlight_bg;
+    box-shadow: 0 1px #ffffff;
+    text-shadow: none;
+  }
+}
+
+.line-numbers {
+  .line-highlight {
+    &:after {
+      content: none;
+    }
+    &:before {
+      content: none;
+    }
+  }
+  .line-numbers-rows {
+    font-size: 100%;
+
+    position: absolute;
+    top: 0;
+    left: -3.8em;
+
+    width: 3em;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    letter-spacing: -1px;
+    pointer-events: none;
+
+    border-right: 1px solid #999999;
+  }
+}
+pre[id].linkable-line-numbers {
+  span.line-numbers-rows {
+    pointer-events: all;
+    > span {
+      &:before {
+        cursor: pointer;
+      }
+      &:hover {
+        &:before {
+          background-color: $line_bg;
+        }
+      }
+    }
+  }
+}
+pre[class*="language-"].line-numbers {
+  position: relative;
+
+  padding-left: 3.8em;
+
+  counter-reset: linenumber;
+  > code {
+    position: relative;
+
+    white-space: inherit;
+  }
+}
+
+.line-numbers-rows {
+  > span {
+    display: block;
+
+    counter-increment: linenumber;
+    &:before {
+      display: block;
+
+      padding-right: 0.8em;
+
+      content: counter(linenumber);
+      text-align: right;
+
+      color: $color_2;
+    }
+  }
+}
+div.code-toolbar {
+  position: relative;
+  > .toolbar {
+    position: absolute;
+    z-index: 10;
+    top: 0.3em;
+    right: 0.2em;
+
+    transition: opacity 0.3s ease-in-out;
+
+    opacity: 0;
+    > .toolbar-item {
+      display: inline-block;
+      > a {
+        font-size: 0.8em;
+
+        padding: 0 0.5em;
+
+        cursor: pointer;
+
+        color: $color_13;
+        border-radius: 0.5em;
+        background: #f5f2f0;
+        background: rgba(224, 224, 224, 0.2);
+        box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+        &:focus {
+          text-decoration: none;
+
+          color: $color_12;
+        }
+        &:hover {
+          text-decoration: none;
+
+          color: $color_12;
+        }
+      }
+      > button {
+        font: inherit;
+        font-size: 0.8em;
+        line-height: normal;
+
+        overflow: visible;
+
+        padding: 0;
+        padding: 0 0.5em;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+
+        color: $color_12;
+        color: $color_13;
+        border: 0;
+        border-radius: 0.5em;
+        background: 0 0;
+        background: #f5f2f0;
+        background: rgba(224, 224, 224, 0.2);
+        box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+        &:focus {
+          text-decoration: none;
+
+          color: $color_12;
+        }
+        &:hover {
+          text-decoration: none;
+
+          color: $color_12;
+        }
+      }
+      > span {
+        font-size: 0.8em;
+
+        padding: 0 0.5em;
+
+        color: $color_13;
+        border-radius: 0.5em;
+        background: #f5f2f0;
+        background: rgba(224, 224, 224, 0.2);
+        box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+        &:focus {
+          text-decoration: none;
+
+          color: $color_12;
+        }
+        &:hover {
+          text-decoration: none;
+
+          color: $color_12;
+        }
+      }
+    }
+  }
+  &:hover {
+    > .toolbar {
+      opacity: 1;
+    }
+  }
+  &:focus-within {
+    > .toolbar {
+      opacity: 1;
+    }
+  }
+}
+
+.command-line-prompt {
+  font-size: 100%;
+
+  display: block;
+  float: left;
+
+  margin-right: 1em;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: right;
+  letter-spacing: -1px;
+  pointer-events: none;
+
+  border-right: 1px solid #999999;
+  > span {
+    &:before {
+      display: block;
+
+      padding-right: 0.8em;
+
+      content: " ";
+
+      opacity: 0.7;
+    }
+  }
+  > span[data-user] {
+    &:before {
+      content: "[" attr(data-user) "@" attr(data-host) "] $";
+    }
+  }
+  > span[data-user="root"] {
+    &:before {
+      content: "[" attr(data-user) "@" attr(data-host) "] #";
+    }
+  }
+  > span[data-prompt] {
+    &:before {
+      content: attr(data-prompt);
+    }
+  }
+  > span[data-continuation-prompt] {
+    &:before {
+      content: attr(data-continuation-prompt);
+    }
+  }
+}
+
+.command-line {
+  span.token.output {
+    opacity: 0.7;
+  }
+}
+@media print {
+  .line-highlight {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}

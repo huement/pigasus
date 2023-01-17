@@ -1,0 +1,18 @@
+extends ./layout/basic
+
+append config
+  - var metaDesc = 'A simple example app for customizing then downloading a JSON object comprised of design token data'
+  - var slug = 'index'
+  - var title = 'JSON Builder - G23'
+  - var colorTokens = require('../tokens/chords.json')
+
+append scriptsJS
+  script(src=path+"js/widgets.js?stamp=" + stamp, type="module")
+
+append pageCSS
+  link(rel="stylesheet", href=path+"css/builder.css?stamp="+ stamp, type="text/css" id="index_css")
+
+block content
+  +page-heading('json-builder', 'JSON Builder')
+
+  json-builder(name="Grunt23", version="0.13.0")
